@@ -33,9 +33,8 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
    
 Execute o programa:
 
-    ```
-     python src/merger.py    
-    ```
+    python src/merger.py    
+    
     
 Escolha uma das opções no menu:
 
