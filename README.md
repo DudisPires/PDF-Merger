@@ -23,3 +23,13 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
 
 ## ▶️ Como usar
 
+1. **Clone o repositório**
+
+2. Instale as dependências:
+   ```
+   pip install -r requirements.txt
+   python pdf_merger.py
+
+    ```
+
+
