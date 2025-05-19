@@ -31,5 +31,19 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
    python pdf_merger.py
 
     ```
+Execute o programa:
+   ```
+   python pdf_merger.py
+
+   ```
+Escolha uma das opções no menu:
+
+   1: Informar manualmente os arquivos PDF.
+
+   2: Detectar e mesclar todos os PDFs do diretório atual.
+
+
+
+
 
 
