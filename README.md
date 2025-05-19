@@ -26,16 +26,16 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
 1. **Clone o repositório**
 
 2. Instale as dependências:
-   ```
+    ```
    pip install -r requirements.txt
    python pdf_merger.py
-
     ```
+   
 Execute o programa:
-   ```
-   python pdf_merger.py
-
-   ```
+    ```
+     python src/merger.py    
+    ```
+    
 Escolha uma das opções no menu:
 
    1: Informar manualmente os arquivos PDF.
