@@ -32,6 +32,7 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
     ```
    
 Execute o programa:
+
     ```
      python src/merger.py    
     ```
