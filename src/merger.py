@@ -1,7 +1,6 @@
 import os
 from PyPDF2 import PdfMerger
 
-
 # Lista com os caminhos dos arquivos PDF
 arquivos_pdf = [
     "teste1.pdf",
