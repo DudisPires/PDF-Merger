@@ -39,7 +39,7 @@ class PDFMergerApp(ctk.CTk):
         ctk.set_default_color_theme("blue")
 
         # Título
-        self.label = ctk.CTkLabel(self, text="📄 PDF Merger", font=ctk.CTkFont(size=20, weight="bold"))
+        self.label = ctk.CTkLabel(self, text="PDF Merger", font=ctk.CTkFont(size=20, weight="bold"))
         self.label.pack(pady=10)
 
         # Botão para selecionar PDFs
@@ -47,7 +47,7 @@ class PDFMergerApp(ctk.CTk):
         self.select_button.pack(pady=10)
 
         # Lista de arquivos
-        self.listbox = ctk.CTkTextbox(self, height=120, width=500)
+        self.listbox = ctk.CTkTextbox(self, height=120, width=350)
         self.listbox.pack(pady=10)
 
         # Campo para nome do arquivo de saída
