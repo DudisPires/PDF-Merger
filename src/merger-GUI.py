@@ -3,11 +3,9 @@ import PyPDF2
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 
-# Valida se é um PDF
 def validar_pdf(caminho):
     return os.path.isfile(caminho) and caminho.lower().endswith('.pdf')
 
-# Junta os PDFs
 def mesclar_pdfs(lista_arquivos, nome_saida):
     merger = PyPDF2.PdfMerger()
 
@@ -27,7 +25,6 @@ def mesclar_pdfs(lista_arquivos, nome_saida):
     except Exception as e:
         messagebox.showerror("Erro", f"Erro ao salvar o arquivo final: {e}")
 
-# App GUI
 class PDFMergerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -38,23 +35,18 @@ class PDFMergerApp(ctk.CTk):
         ctk.set_appearance_mode("System")
         ctk.set_default_color_theme("blue")
 
-        # Título
-        self.label = ctk.CTkLabel(self, text="📄 PDF Merger", font=ctk.CTkFont(size=20, weight="bold"))
+        self.label = ctk.CTkLabel(self, text="PDF Merger", font=ctk.CTkFont(size=20, weight="bold"))
         self.label.pack(pady=10)
 
-        # Botão para selecionar PDFs
         self.select_button = ctk.CTkButton(self, text="Selecionar PDFs", command=self.selecionar_pdfs)
         self.select_button.pack(pady=10)
 
-        # Lista de arquivos
         self.listbox = ctk.CTkTextbox(self, height=120, width=500)
         self.listbox.pack(pady=10)
 
-        # Campo para nome do arquivo de saída
         self.output_entry = ctk.CTkEntry(self, placeholder_text="Nome do arquivo final (ex: resultado.pdf)", width=400)
         self.output_entry.pack(pady=10)
 
-        # Botão para mesclar
         self.merge_button = ctk.CTkButton(self, text="Mesclar PDFs", command=self.executar_mesclagem)
         self.merge_button.pack(pady=10)
 
