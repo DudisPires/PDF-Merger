@@ -131,6 +131,8 @@ celerybeat.pid
 .env
 .venv
 ambiente-pdf/
+ambiente-projetos-teste/
+/ambiente-projetos-teste/
 env/
 venv/
 ENV/
