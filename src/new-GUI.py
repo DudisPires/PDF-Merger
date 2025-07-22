@@ -7,7 +7,10 @@ from functools import partial
 def validar_pdf(caminho):
     return os.path.isfile(caminho) and caminho.lower().endswith('.pdf')
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Dif-branch-for-necessary-changes
 def mesclar_pdfs(lista_arquivos, nome_saida, status_callback=None):
     merger = PyPDF2.PdfMerger()
     total_files = len(lista_arquivos)
@@ -17,7 +20,10 @@ def mesclar_pdfs(lista_arquivos, nome_saida, status_callback=None):
         if status_callback:
             status_callback(f"Processando {os.path.basename(arquivo)} ({i+1}/{total_files})...")
         
+<<<<<<< HEAD
        
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         if not validar_pdf(arquivo):
             msg = f"Arquivo inválido ou não encontrado (ignorado): {os.path.basename(arquivo)}"
             messagebox.showwarning("Aviso", msg)
@@ -33,7 +39,10 @@ def mesclar_pdfs(lista_arquivos, nome_saida, status_callback=None):
             messagebox.showerror("Erro de Leitura", error_msg)
             if status_callback:
                 status_callback(f"Erro ao ler '{os.path.basename(arquivo)}'.")
+<<<<<<< HEAD
             
+=======
+>>>>>>> Dif-branch-for-necessary-changes
 
     if merged_count == 0 and total_files > 0:
         messagebox.showerror("Erro", "Nenhum arquivo PDF válido foi processado.")
@@ -44,7 +53,10 @@ def mesclar_pdfs(lista_arquivos, nome_saida, status_callback=None):
     if merged_count == 0 and total_files == 0: 
         if status_callback:
             status_callback("Nenhum arquivo selecionado para mesclar.")
+<<<<<<< HEAD
         
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         return False
 
 
@@ -86,7 +98,11 @@ class PDFMergerApp(ctk.CTk):
         self.main_frame.grid(row=0, column=0, padx=15, pady=15, sticky="nsew")
         self.main_frame.grid_columnconfigure(0, weight=1) 
 
+<<<<<<< HEAD
         self.title_label = ctk.CTkLabel(self.main_frame, text="📄 Agrupador de PDFs 📄", font=ctk.CTkFont(size=26, weight="bold"))
+=======
+        self.title_label = ctk.CTkLabel(self.main_frame, text="Agrupador de PDFs", font=ctk.CTkFont(size=26, weight="bold"))
+>>>>>>> Dif-branch-for-necessary-changes
         self.title_label.grid(row=0, column=0, padx=10, pady=(15, 25))
         self.main_frame.grid_rowconfigure(0, weight=0)
 
@@ -96,6 +112,7 @@ class PDFMergerApp(ctk.CTk):
         self.selection_frame.grid_columnconfigure(1, weight=0) 
         self.main_frame.grid_rowconfigure(1, weight=0)
 
+<<<<<<< HEAD
         self.select_button = ctk.CTkButton(self.selection_frame, text="➕ Adicionar PDFs à Lista", command=self.selecionar_pdfs, height=40, font=ctk.CTkFont(size=14))
         self.select_button.grid(row=0, column=0, padx=(0,10), pady=5, sticky="ew")
 
@@ -104,6 +121,16 @@ class PDFMergerApp(ctk.CTk):
 
 
         self.list_label = ctk.CTkLabel(self.main_frame, text="Arquivos Selecionados (ordem de mesclagem):", font=ctk.CTkFont(size=12, slant="italic"))
+=======
+        self.select_button = ctk.CTkButton(self.selection_frame, text="Adicionar PDFs à Lista", command=self.selecionar_pdfs, height=40, font=ctk.CTkFont(size=14))
+        self.select_button.grid(row=0, column=0, padx=(0,10), pady=5, sticky="ew")
+
+        self.clear_button = ctk.CTkButton(self.selection_frame, text="Limpar Lista", command=self.limpar_lista_pdfs, height=40, font=ctk.CTkFont(size=14), fg_color="#D32F2F", hover_color="#B71C1C")
+        self.clear_button.grid(row=0, column=1, padx=(0,0), pady=5, sticky="e")
+
+
+        self.list_label = ctk.CTkLabel(self.main_frame, text="Arquivos Selecionados (ordem de mesclagem):", font=ctk.CTkFont(size=15, slant="italic"))
+>>>>>>> Dif-branch-for-necessary-changes
         self.list_label.grid(row=2, column=0, padx=10, pady=(15,2), sticky="w")
         self.main_frame.grid_rowconfigure(2, weight=0)
 
@@ -124,12 +151,17 @@ class PDFMergerApp(ctk.CTk):
         self.output_frame.grid_columnconfigure(1, weight=0) 
         self.main_frame.grid_rowconfigure(4, weight=0)
 
+<<<<<<< HEAD
         self.output_entry_label = ctk.CTkLabel(self.output_frame, text="Nome e Local do Arquivo de Saída:", font=ctk.CTkFont(size=12, slant="italic"))
+=======
+        self.output_entry_label = ctk.CTkLabel(self.output_frame, text="Nome e local do arquivo de saída:", font=ctk.CTkFont(size=15, slant="italic"))
+>>>>>>> Dif-branch-for-necessary-changes
         self.output_entry_label.grid(row=0, column=0, columnspan=2, padx=0, pady=(0,2), sticky="w")
 
         self.output_entry = ctk.CTkEntry(self.output_frame, placeholder_text="Clique em 'Salvar Como...' ou digite o caminho/nome.pdf", height=35, font=ctk.CTkFont(size=13))
         self.output_entry.grid(row=1, column=0, padx=(0,10), pady=5, sticky="ew")
 
+<<<<<<< HEAD
         self.browse_output_button = ctk.CTkButton(self.output_frame, text="💾 Salvar Como...", command=self.browse_output_file, height=35, font=ctk.CTkFont(size=14))
         self.browse_output_button.grid(row=1, column=1, padx=(0,0), pady=5, sticky="e")
 
@@ -138,18 +170,35 @@ class PDFMergerApp(ctk.CTk):
         self.main_frame.grid_rowconfigure(5, weight=0)
 
         self.status_label = ctk.CTkLabel(self.main_frame, text="Pronto para começar!", anchor="w", font=ctk.CTkFont(size=12))
+=======
+        self.browse_output_button = ctk.CTkButton(self.output_frame, text="Salvar Como...", command=self.browse_output_file, height=35, font=ctk.CTkFont(size=14))
+        self.browse_output_button.grid(row=1, column=1, padx=(0,0), pady=5, sticky="e")
+
+        self.merge_button = ctk.CTkButton(self.main_frame, text="Unir PDFs", command=self.executar_mesclagem, height=45, font=ctk.CTkFont(size=16, weight="bold"))
+        self.merge_button.grid(row=5, column=0, padx=10, pady=(15,5), sticky="ew")
+        self.main_frame.grid_rowconfigure(5, weight=0)
+
+        self.status_label = ctk.CTkLabel(self.main_frame, text=None, anchor="w", font=ctk.CTkFont(size=12))
+>>>>>>> Dif-branch-for-necessary-changes
         self.status_label.grid(row=6, column=0, padx=10, pady=(5,10), sticky="ew")
         self.main_frame.grid_rowconfigure(6, weight=0)
 
         self._atualizar_display_pdfs() 
 
     def _atualizar_status(self, message):
+<<<<<<< HEAD
         """Updates the status label text."""
         self.status_label.configure(text=message)
         self.update_idletasks() 
 
     def _atualizar_display_pdfs(self):
         """Rebuilds the scrollable list of selected PDF files."""
+=======
+        self.status_label.configure(text=message)
+        self.update_idletasks() 
+
+    def _atualizar_display_pdfs(self):    
+>>>>>>> Dif-branch-for-necessary-changes
         for widget in self.scrollable_file_list.winfo_children():
             widget.destroy()
 
@@ -170,7 +219,10 @@ class PDFMergerApp(ctk.CTk):
             item_frame.pack(fill="x", pady=(2,3), padx=2)
             item_frame.grid_columnconfigure(0, weight=1) 
             item_frame.grid_columnconfigure(1, weight=0) 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Dif-branch-for-necessary-changes
             label_text = f"{idx+1}. {filename}"
             if len(label_text) > 70: 
                 label_text = label_text[:67] + "..."
@@ -180,10 +232,16 @@ class PDFMergerApp(ctk.CTk):
             
             if len(filename) > len(label_text) - (len(str(idx+1)) + 3) : 
                  # label.bind("<Enter>", lambda e, fn=filename: self._atualizar_status(f"Arquivo: {fn}"))
+<<<<<<< HEAD
                  # label.bind("<Leave>", lambda e: self._atualizar_status("Pronto.")) # Ou o status anterior
                  pass
 
 
+=======
+                 # label.bind("<Leave>", lambda e: self._atualizar_status("Pronto.")) 
+                 pass
+
+>>>>>>> Dif-branch-for-necessary-changes
             remove_btn = ctk.CTkButton(item_frame, text="✕", width=28, height=28,
                                        command=partial(self.remover_pdf_da_lista, filepath),
                                        fg_color="#E57373", hover_color="#EF5350", text_color="white",
@@ -191,14 +249,21 @@ class PDFMergerApp(ctk.CTk):
             remove_btn.grid(row=0, column=1, padx=(0,5), pady=2, sticky="e")
 
     def selecionar_pdfs(self):
+<<<<<<< HEAD
         """Opens a dialog to select PDF files and adds them to the list."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         arquivos = filedialog.askopenfilenames(
             title="Selecione os arquivos PDF para unir",
             filetypes=[("Arquivos PDF", "*.pdf")]
         )
         if arquivos:
             novos_arquivos_adicionados_count = 0
+<<<<<<< HEAD
             for arq in list(arquivos): 
+=======
+            for arq in list(arquivos): # Convert to list
+>>>>>>> Dif-branch-for-necessary-changes
                 if arq not in self.pdf_list:
                     self.pdf_list.append(arq)
                     novos_arquivos_adicionados_count +=1
@@ -211,7 +276,10 @@ class PDFMergerApp(ctk.CTk):
 
 
     def remover_pdf_da_lista(self, filepath_to_remove):
+<<<<<<< HEAD
         """Removes a specific PDF file from the list."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         if filepath_to_remove in self.pdf_list:
             filename = os.path.basename(filepath_to_remove)
             self.pdf_list.remove(filepath_to_remove)
@@ -222,7 +290,10 @@ class PDFMergerApp(ctk.CTk):
 
 
     def limpar_lista_pdfs(self):
+<<<<<<< HEAD
         """Clears all selected PDF files from the list after confirmation."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         if not self.pdf_list:
             messagebox.showinfo("Informação", "A lista de PDFs já está vazia.")
             return
@@ -236,7 +307,10 @@ class PDFMergerApp(ctk.CTk):
             self._atualizar_status("Lista de PDFs e nome de saída foram limpos.")
 
     def browse_output_file(self):
+<<<<<<< HEAD
         """Opens a 'Save As' dialog to choose the output file name and location."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         suggested_name = "documento_unificado.pdf"
         if self.pdf_list: 
             try:
@@ -273,7 +347,10 @@ class PDFMergerApp(ctk.CTk):
 
 
     def _set_buttons_state(self, state):
+<<<<<<< HEAD
         """Enable or disable main action buttons."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         self.select_button.configure(state=state)
         self.clear_button.configure(state=state)
         self.browse_output_button.configure(state=state)
@@ -281,7 +358,10 @@ class PDFMergerApp(ctk.CTk):
 
 
     def executar_mesclagem(self):
+<<<<<<< HEAD
         """Handles the PDF merging process."""
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         if not self.pdf_list:
             messagebox.showwarning("Aviso", "Nenhum arquivo PDF selecionado para unir.")
             self._atualizar_status("Falha: Nenhum PDF selecionado.")
@@ -300,7 +380,10 @@ class PDFMergerApp(ctk.CTk):
         if not final_output_name.lower().endswith('.pdf'):
             final_output_name += '.pdf'
         
+<<<<<<< HEAD
       
+=======
+>>>>>>> Dif-branch-for-necessary-changes
         if not os.path.isabs(final_output_name) and not self.output_path:
             base_dir = os.path.dirname(self.pdf_list[0]) if self.pdf_list and os.path.dirname(self.pdf_list[0]) else os.getcwd()
             final_output_name = os.path.join(base_dir, os.path.basename(final_output_name)) 
@@ -322,7 +405,10 @@ class PDFMergerApp(ctk.CTk):
             self._atualizar_status("Pronto. PDFs unidos com sucesso!")
             pass
         else:
+<<<<<<< HEAD
             
+=======
+>>>>>>> Dif-branch-for-necessary-changes
             if not self.pdf_list: 
                  self._atualizar_status("Operação cancelada: Nenhum PDF para unir.")
             else:
