@@ -17,8 +17,14 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
 ## 🛠️ Tecnologias utilizadas
 
 - Python 3.x
-- [PyPDF2](https://pypi.org/project/PyPDF2/) – para manipulação dos arquivos PDF
 
+.
+
+## 📚 Bibliotecas e Frameworks
+- customtkinter ->	Framework moderno para construção de interfaces gráficas com estilo escuro e suporte a temas.
+- PyPDF2 ->	Biblioteca para manipulação e mesclagem de arquivos PDF.
+- tkinter.filedialog ->	Utilitário para selecionar arquivos e pastas de forma interativa.
+- tkinter.messagebox ->	Exibe mensagens de alerta, erro ou sucesso para o usuário.
 ---
 
 ## ▶️ Como usar
@@ -33,7 +39,7 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
    
 3. Execute o programa:
     ```
-   python src/merger-GUI.py
+   python src/new-GUI.py
       
     ```
     
