@@ -42,7 +42,6 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
       
     ```
 
-    
 4. Interaja com a interface
     
 
