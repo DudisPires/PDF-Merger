@@ -41,6 +41,7 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
    python src/new-GUI.py
       
     ```
+
     
 4. Interaja com a interface
     
