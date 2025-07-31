@@ -11,7 +11,6 @@ Desenvolvido principalmente pela necessidade no amiente de estágio, visando fac
 - Interface interativa que permite escolher os arquivos que deseja fazer o merge
 - Verificação de validade dos arquivos de entrada
 - Geração de um PDF final com nome personalizado e path de escolha do usuário
-
 ---
 
 ## 🛠️ Tecnologias utilizadas
