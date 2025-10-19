@@ -67,7 +67,7 @@ def mesclar_pdfs(lista_arquivos, nome_saida, status_callback=None):
 class PDFMergerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("Agrupador de PDFs Pro")
+        self.title("Agrupador de PDFs")
         self.geometry("700x580") 
         self.pdf_list = [] 
         self.output_path = "" 
